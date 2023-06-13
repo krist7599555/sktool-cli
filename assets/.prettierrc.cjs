@@ -1,0 +1,16 @@
+module.exports = {
+  useTabs: false,
+  tabWidth: 2,
+  singleQuote: true,
+  trailingComma: 'none',
+  arrowParens: 'avoid',
+  semi: true,
+  printWidth: 100,
+  plugins: ['prettier-plugin-svelte', 'prettier-plugin-tailwindcss'],
+  pluginSearchDirs: ['.'],
+  overrides: [{ files: '*.svelte', options: { parser: 'svelte' } }],
+  svelteStrictMode: false,
+  svelteIndentScriptAndStyle: false,
+  svelteSortOrder: 'options-scripts-markup-styles',
+  svelteAllowShorthand: true,
+};

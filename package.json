@@ -1,0 +1,21 @@
+{
+  "name": "@krist7599555/sktool-cli",
+  "version": "1.0.0",
+  "description": "Svelte Kit Tool for krist7599555",
+  "type": "module",
+  "bin": {
+    "sktool": "./src/cli.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/prompts": "^2.4.4",
+    "untildify": "^5.0.0"
+  },
+  "dependencies": {
+    "inquirer": "^9.2.7",
+    "prompt": "^1.3.0",
+    "zx": "^7.2.2"
+  }
+}

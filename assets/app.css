@@ -1,0 +1,31 @@
+/* Write your global styles here, in PostCSS syntax */
+@import url('@fontsource/noto-sans-thai/300.css');
+@import url('@fontsource/noto-sans-thai/500.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #F68234;
+  }
+  * {
+    box-sizing: border-box;
+    /* -webkit-tap-highlight-color: transparent; */
+  }
+  /* :not(input, textarea) {
+    user-select: none;
+  } */
+  html {
+    font-weight: 300;
+    font-family: 'Noto Sans Thai', 'Noto Sans', 'Sukhumvit Set', -apple-system, Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  .button {
+    @apply px-4 py-2 rounded;
+    @apply bg-[color:var(--primary-color)];
+    @apply disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+}
