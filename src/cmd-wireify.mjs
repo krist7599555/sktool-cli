@@ -11,8 +11,8 @@ import { $, cd } from 'zx';
 export async function cmd_wireify(dir) {
   cd(dir.pathname);
   await $`pnpm i wireit pnpm -D`;
-  await $`sed '/wireit/d' ./.gitignore > ./.gitignore`;
-  await $`echo '.wireit' >> ./.gitignore`;
+  // await $`sed '/wireit/d' ./.gitignore > ./.gitignore`;
+  // await $`echo '.wireit' >> ./.gitignore`;
   
   const package_json = new URL('./package.json', dir);
   console.log('at', package_json.href);

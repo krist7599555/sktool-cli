@@ -118,7 +118,7 @@ if (selected_commands.includes('tailwind+postcss')) {
 if (selected_commands.includes('seo')) {
   cd(project_dir.pathname);
   await $`pnpm i -D svelte-meta-tags`
-  await $`sed '/env/d' ./.gitignore > ./.gitignore` // un ignore .env file
+  // await $`sed '/env/d' ./.gitignore > ./.gitignore` // un ignore .env file
   await fs.mkdir(new URL('./src/lib', project_dir), { recursive: true })
   await fs.copyFile(
     new URL('./seo.svelte', ASSETS_DIR),
