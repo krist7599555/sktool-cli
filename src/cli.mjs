@@ -75,18 +75,18 @@ if (selected_commands.includes('eslint+prettier+vscode')) {
   await fs.copyFile(
     new URL('./.eslintrc.cjs', ASSETS_DIR),
     new URL('./.eslintrc.cjs', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
   await fs.copyFile(
     new URL('./.prettierrc.cjs', ASSETS_DIR),
     new URL('./.prettierrc.cjs', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
   fs.mkdir(new URL('./.vscode', project_dir), { recursive: true })
   await fs.copyFile(
     new URL('./settings.json', ASSETS_DIR),
     new URL('./.vscode/settings.json', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
 }
 
@@ -96,18 +96,18 @@ if (selected_commands.includes('tailwind+postcss')) {
   await fs.copyFile(
     new URL('./tailwind.config.cjs', ASSETS_DIR),
     new URL('./tailwind.config.cjs', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
   await fs.copyFile(
     new URL('./postcss.config.cjs', ASSETS_DIR),
     new URL('./postcss.config.cjs', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
   await fs.mkdir(new URL('./.vscode', project_dir), { recursive: true })
   await fs.copyFile(
     new URL('./settings.json', ASSETS_DIR),
     new URL('./.vscode/settings.json', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
 }
 
@@ -119,12 +119,12 @@ if (selected_commands.includes('seo')) {
   await fs.copyFile(
     new URL('./seo.svelte', ASSETS_DIR),
     new URL('./src/lib/seo.svelte', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
   await fs.copyFile(
     new URL('./.env', ASSETS_DIR),
     new URL('./.env', project_dir),
-    fs.constants.COPYFILE_FICLONE_FORCE
+    // fs.constants.COPYFILE_FICLONE_FORCE
   );
 }
 
