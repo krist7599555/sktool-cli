@@ -16,7 +16,7 @@ export async function cmd_wireify(dir) {
   
   const package_json = new URL('./package.json', dir);
   console.log('at', package_json.href);
-  await fs.access(package_json, fs.constants.R_OK | fs.constants.W_OK);
+  await fs.access(package_json.pathname, fs.constants.R_OK | fs.constants.W_OK);
   // eslint-disable-next-line unicorn/prefer-json-parse-buffer
   const config = JSON.parse(
     await fs.readFile(package_json, { encoding: 'utf8' })
