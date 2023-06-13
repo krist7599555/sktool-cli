@@ -4,13 +4,17 @@
   "description": "Svelte Kit Tool for krist7599555",
   "type": "module",
   "bin": {
-    "sktool": "./src/cli.mjs"
+    "sktool": "./bin/cli.mjs"
+  },
+  "scripts": {
+    "build": "esbuild ./src/cli.mjs --bundle --outfile=bin/cli.mjs --format=esm --platform=node --target=esnext"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/prompts": "^2.4.4",
+    "esbuild": "^0.18.2",
     "untildify": "^5.0.0"
   },
   "dependencies": {
