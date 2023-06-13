@@ -65,8 +65,9 @@ if (selected_commands.includes('wireify')) {
   await cmd_wireify(project_dir);
 }
 
+
 if (selected_commands.includes('eslint+prettier+vscode')) {
-  cd(project_dir);
+  cd(project_dir.pathname);
   await $`pnpm i -D eslint eslint-config-prettier eslint-define-config eslint-plugin-html eslint-plugin-json-format eslint-plugin-prettier eslint-plugin-simple-import-sort eslint-plugin-svelte eslint-plugin-tailwindcss eslint-plugin-unicorn prettier-plugin-svelte prettier-plugin-tailwindcss eslint-formatter-mo`
   console.log()
   console.log("  > SHOULD RUN", 'eslint . --color --format mo')
@@ -90,7 +91,7 @@ if (selected_commands.includes('eslint+prettier+vscode')) {
 }
 
 if (selected_commands.includes('tailwind+postcss')) {
-  cd(project_dir);
+  cd(project_dir.pathname);
   await $`pnpm i -D tailwindcss postcss postcss-load-config autoprefixer @fontsource/noto-sans-thai @fontsource/noto-sans`
   await fs.copyFile(
     new URL('./tailwind.config.cjs', ASSETS_DIR),
@@ -111,7 +112,7 @@ if (selected_commands.includes('tailwind+postcss')) {
 }
 
 if (selected_commands.includes('seo')) {
-  cd(project_dir);
+  cd(project_dir.pathname);
   await $`pnpm i -D svelte-meta-tags`
   await $`sed '/env/d' ./.gitignore > ./.gitignore` // un ignore .env file
   await fs.mkdir(new URL('./src/lib', project_dir), { recursive: true })
@@ -128,9 +129,11 @@ if (selected_commands.includes('seo')) {
 }
 
 if (selected_commands.includes('krist7599555-lodosh')) {
+  cd(project_dir.pathname);
   await $`pnpm i -D @krist7599555/lodosh`
 }
 
 if (selected_commands.includes('icon')) {
+  cd(project_dir.pathname);
   await $`pnpm i -D @steeze-ui/svelte-icon @steeze-ui/lucide-icons @steeze-ui/heroicons`
 }
