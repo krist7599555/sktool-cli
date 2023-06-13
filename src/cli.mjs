@@ -103,10 +103,14 @@ if (selected_commands.includes('tailwind+postcss')) {
     new URL('./postcss.config.cjs', project_dir),
     // fs.constants.COPYFILE_FICLONE_FORCE
   );
-  await fs.mkdir(new URL('./.vscode', project_dir), { recursive: true })
   await fs.copyFile(
-    new URL('./settings.json', ASSETS_DIR),
-    new URL('./.vscode/settings.json', project_dir),
+    new URL('./+layout.svelte', ASSETS_DIR),
+    new URL('./src/routes/+layout.svelte', project_dir),
+    // fs.constants.COPYFILE_FICLONE_FORCE
+  );
+  await fs.copyFile(
+    new URL('./app.css', ASSETS_DIR),
+    new URL('./src/app.css', project_dir),
     // fs.constants.COPYFILE_FICLONE_FORCE
   );
 }
