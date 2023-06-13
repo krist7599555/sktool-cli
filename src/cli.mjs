@@ -6,7 +6,7 @@ import { cmd_wireify } from './cmd-wireify.mjs';
 import { $, cd } from 'zx';
 
 const CWD_DIR = url.pathToFileURL(process.cwd());
-const ASSETS_DIR = new URL('../assets', import.meta.url);
+const ASSETS_DIR = new URL('../assets/', import.meta.url);
 
 const COMMANDS = /** @type {const} */ ([
   'eslint+prettier+vscode',
