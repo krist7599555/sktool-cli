@@ -27,7 +27,7 @@ export async function cmd_wireify(dir) {
   } else {
     let wireit = {};
     let scripts = {};
-    for (const [key, cmd] in Object.entries(config.scripts)) {
+    for (const [key, cmd] of Object.entries(config.scripts)) {
       scripts[key] = 'wireit';
       wireit[key] = {
         command: cmd,
