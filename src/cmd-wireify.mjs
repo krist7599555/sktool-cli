@@ -43,7 +43,7 @@ export async function cmd_wireify(dir) {
       scripts: config.scripts,
       wireit: config.wireit,
     });
-    await fs.writeFile(package_json.href, JSON.stringify(config, undefined, 2));
+    await fs.writeFile(package_json, JSON.stringify(config, undefined, 2));
     console.log('DONE');
   }
 }
