@@ -169,7 +169,7 @@ if (selected_commands.includes('sveltekit-svg')) {
     .then(text => fs.writeFile('./vite.config.ts', text));
 
   await fs
-    .readFile('./app.d.ts', { encoding: 'utf-8' })
+    .readFile('./src/app.d.ts', { encoding: 'utf-8' })
     .then(text => `import '@poppanator/sveltekit-svg/dist/svg';\n` + text)
     .then(text => fs.writeFile('./src/app.d.ts', text));
 }
