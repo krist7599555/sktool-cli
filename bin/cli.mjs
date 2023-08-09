@@ -48450,7 +48450,7 @@ if (selected_commands.includes("sveltekit-svg")) {
           },
         })`
   )).then((text) => fs4.writeFile("./vite.config.ts", text));
-  await fs4.readFile("./app.d.ts", { encoding: "utf-8" }).then((text) => `import '@poppanator/sveltekit-svg/dist/svg';
+  await fs4.readFile("./src/app.d.ts", { encoding: "utf-8" }).then((text) => `import '@poppanator/sveltekit-svg/dist/svg';
 ` + text).then((text) => fs4.writeFile("./src/app.d.ts", text));
 }
 /*! Bundled license information:
